@@ -5,9 +5,10 @@ function About() {
     <section
       id="about"
       style={{
-        backgroundColor: "#f8fafc",
+        backgroundColor: "#0b0b0b", // background gelap premium
         paddingTop: "4.5rem",
         paddingBottom: "4.5rem",
+        color: "#ffffff", // default teks putih
       }}
     >
       <Container>
@@ -16,10 +17,10 @@ function About() {
             <div
               className="text-center"
               style={{
-                backgroundColor: "#ffffff",
+                backgroundColor: "rgba(255, 255, 255, 0.05)", // transparan agar tetap gelap tapi ada frame
                 padding: "2.8rem 2rem",
                 borderRadius: "20px",
-                boxShadow: "0 14px 36px rgba(0, 0, 0, 0.06)",
+                boxShadow: "0 14px 36px rgba(0, 0, 0, 0.3)", // shadow lebih kontras di gelap
               }}
             >
               {/* JUDUL */}
@@ -27,21 +28,23 @@ function About() {
                 style={{
                   fontWeight: 700,
                   marginBottom: "0.4rem",
-                  color: "#0b1f3a",
+                  color: "#ffffff",
+                  fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Tentang Kami
+                Tentang Parfum Kami
               </h2>
 
               {/* SUBTITLE KECIL */}
               <p
                 style={{
                   fontSize: "0.85rem",
-                  color: "#64748b",
+                  color: "#d1d5db",
                   marginBottom: "1.6rem",
+                  fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Mengenal lebih dekat brand dan komitmen kami
+                Menemukan aroma mewah yang eksklusif untuk Anda
               </p>
 
               {/* PARAGRAF UTAMA */}
@@ -49,14 +52,16 @@ function About() {
                 style={{
                   fontSize: "0.95rem",
                   lineHeight: "1.75",
-                  color: "#4a5568",
+                  color: "#e5e7eb",
                   marginBottom: "1.6rem",
+                  fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Kami adalah brand yang berfokus menghadirkan produk berkualitas
-                dengan harga yang transparan dan kompetitif. Setiap produk
-                dipilih secara cermat untuk memastikan kenyamanan, keandalan,
-                serta kepuasan pelanggan dalam setiap pembelian.
+                Kami menghadirkan parfum premium dengan aroma yang memikat dan
+                tahan lama. Setiap varian dipilih dengan cermat dari bahan
+                berkualitas tinggi, menciptakan pengalaman mewah yang eksklusif
+                untuk Anda. Kepuasan dan keistimewaan pelanggan menjadi fokus
+                utama kami dalam setiap botol parfum.
               </p>
 
               {/* DIVIDER HALUS */}
@@ -64,7 +69,7 @@ function About() {
                 style={{
                   width: "48px",
                   height: "2px",
-                  backgroundColor: "#e2e8f0",
+                  backgroundColor: "#6b7280",
                   margin: "0 auto 1.6rem auto",
                   borderRadius: "2px",
                 }}
@@ -75,13 +80,15 @@ function About() {
                 style={{
                   fontSize: "0.9rem",
                   lineHeight: "1.7",
-                  color: "#64748b",
+                  color: "#d1d5db",
                   marginBottom: 0,
+                  fontFamily: "'Playfair Display', serif",
                 }}
               >
-                Dengan layanan yang responsif dan akses digital yang mudah, kami
-                berupaya menjadi mitra terpercaya—mulai dari proses pemesanan
-                hingga produk diterima dengan aman dan nyaman.
+                Dengan pelayanan yang profesional dan pengiriman aman, kami
+                memastikan setiap pelanggan merasakan pengalaman parfum
+                eksklusif—mulai dari pemesanan hingga aroma mewah menemani
+                setiap momen spesial Anda.
               </p>
             </div>
           </Col>

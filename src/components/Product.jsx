@@ -1,15 +1,18 @@
 import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
-import produkImage from "../assets/images/produk1.jpg";
+import parfume1 from "../assets/images/parfume1.jpg";
+import parfume2 from "../assets/images/parfume2.jpg";
+import parfume3 from "../assets/images/parfume3.jpg";
+import parfume4 from "../assets/images/parfume4.jpg";
 
 function Product() {
   const products = [
-    { id: 1, name: "MacBook Air M1", price: "Rp 12.500.000" },
-    { id: 2, name: "ASUS VivoBook 14", price: "Rp 6.200.000" },
-    { id: 3, name: "HP Pavilion 15", price: "Rp 7.800.000" },
-    { id: 4, name: "Lenovo IdeaPad Slim 3", price: "Rp 5.900.000" },
+    { id: 1, name: "Eau de Parfum Rose", price: "Rp 450.000", image: parfume1 },
+    { id: 2, name: "Vanilla Essence", price: "Rp 480.000", image: parfume2 },
+    { id: 3, name: "Citrus Delight", price: "Rp 500.000", image: parfume3 },
+    { id: 4, name: "Mystic Oud", price: "Rp 650.000", image: parfume4 },
   ];
 
-  // Mobile slider (2 produk)
+  // Mobile slider (2 produk per slide)
   const productPairs = [];
   for (let i = 0; i < products.length; i += 2) {
     productPairs.push(products.slice(i, i + 2));
@@ -21,30 +24,34 @@ function Product() {
       style={{
         border: "none",
         borderRadius: "18px",
-        backgroundColor: "#ffffff",
-        boxShadow: "0 12px 28px rgba(15, 23, 42, 0.08)",
+        backgroundColor: "rgba(255, 255, 255, 0.05)",
+        boxShadow: "0 12px 28px rgba(0, 0, 0, 0.5)",
         overflow: "hidden",
+        color: "#ffffff",
+        fontFamily: "'Playfair Display', serif",
       }}
     >
-      {/* IMAGE → jadi penentu tinggi card */}
+      {/* IMAGE */}
       <Card.Img
-        src={produkImage}
+        src={item.image}
         alt={item.name}
         style={{
-          height: "160px", // ⬅️ desktop lebih tinggi
+          height: "220px", // lebih tinggi untuk desktop
           objectFit: "contain",
-          padding: "12px",
+          margin: 0,
+          width: "100%", // menempel ke sisi card
+          borderRadius: "12px 12px 0 0",
         }}
       />
 
-      <Card.Body style={{ padding: "1rem" }}>
+      <Card.Body style={{ padding: "0.8rem 0.9rem" }}>
         {/* NAMA */}
         <Card.Title
           style={{
-            fontSize: "0.9rem",
+            fontSize: "0.95rem",
             fontWeight: 600,
             marginBottom: "0.3rem",
-            color: "#0b1f3a",
+            color: "#ffffff",
           }}
         >
           {item.name}
@@ -53,10 +60,10 @@ function Product() {
         {/* HARGA */}
         <div
           style={{
-            fontSize: "0.8rem",
+            fontSize: "0.85rem",
             fontWeight: 600,
-            color: "#16a34a",
-            marginBottom: "1rem",
+            color: "#facc15",
+            marginBottom: "0.8rem",
           }}
         >
           {item.price}
@@ -64,7 +71,7 @@ function Product() {
 
         {/* CTA */}
         <Button
-          variant="outline-success"
+          variant="light"
           size="sm"
           href="https://wa.me/628xxxxxxxxxx"
           className="w-100 d-flex align-items-center justify-content-center gap-1"
@@ -72,6 +79,7 @@ function Product() {
             fontSize: "0.75rem",
             borderRadius: "12px",
             padding: "0.45rem",
+            fontFamily: "'Playfair Display', serif",
           }}
         >
           <i className="bi bi-whatsapp"></i>
@@ -85,7 +93,7 @@ function Product() {
     <section
       id="product"
       style={{
-        background: "linear-gradient(180deg, #c1d4f0 0%, #ffffff 100%)",
+        backgroundColor: "#0b0b0b",
         paddingTop: "4.5rem",
         paddingBottom: "4.5rem",
       }}
@@ -95,8 +103,9 @@ function Product() {
           className="text-center"
           style={{
             fontWeight: 700,
-            color: "#0b1f3a",
+            color: "#ffffff",
             marginBottom: "0.4rem",
+            fontFamily: "'Playfair Display', serif",
           }}
         >
           Produk Kami
@@ -106,11 +115,12 @@ function Product() {
           className="text-center"
           style={{
             fontSize: "0.85rem",
-            color: "#64748b",
+            color: "#d1d5db",
             marginBottom: "2.2rem",
+            fontFamily: "'Playfair Display', serif",
           }}
         >
-          Laptop pilihan, siap dipesan cepat via WhatsApp.
+          Koleksi parfum eksklusif, siap dipesan langsung via WhatsApp.
         </p>
 
         {/* MOBILE */}
@@ -131,7 +141,7 @@ function Product() {
         </div>
 
         {/* DESKTOP */}
-        <Row className="g-4 d-none d-md-flex">
+        <Row className="g-3 d-none d-md-flex">
           {products.map((item) => (
             <Col md={3} key={item.id}>
               <ProductCard item={item} />

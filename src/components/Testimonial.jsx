@@ -3,15 +3,15 @@ import { Container, Row, Col, Card, Carousel } from "react-bootstrap";
 function Testimonial() {
   const testimonials = [
     {
-      text: "Kualitas produknya sangat baik dan sesuai dengan deskripsi. Proses pemesanan juga mudah.",
+      text: "Aromanya sangat memikat dan tahan lama. Pengiriman cepat, produk diterima dengan aman dan rapi.",
       name: "Pelanggan Terverifikasi",
     },
     {
-      text: "Admin responsif dan informatif. Pengiriman cepat dan produk diterima dengan aman.",
+      text: "Kualitas parfum premium, kemasan elegan, dan pelayanan sangat memuaskan. Sangat direkomendasikan.",
       name: "Pelanggan Terverifikasi",
     },
     {
-      text: "Pengalaman belanja yang memuaskan. Produk rapi, original, dan bisa dipercaya.",
+      text: "Belanja mudah via WhatsApp. Aroma mewah dan eksklusif membuat pengalaman belanja saya tak terlupakan.",
       name: "Pelanggan Terverifikasi",
     },
   ];
@@ -19,16 +19,18 @@ function Testimonial() {
   const cardStyle = {
     border: "none",
     borderRadius: "18px",
-    backgroundColor: "#ffffff",
-    boxShadow: "0 10px 24px rgba(15, 23, 42, 0.06)",
+    backgroundColor: "rgba(255, 255, 255, 0.05)", // transparan elegan
+    boxShadow: "0 12px 28px rgba(0, 0, 0, 0.5)",
     padding: "2rem 1.8rem",
+    color: "#ffffff",
+    fontFamily: "'Playfair Display', serif",
   };
 
   return (
     <section
       id="testimoni"
       style={{
-        background: "linear-gradient(180deg, #f4f8ff 0%, #ffffff 80%)",
+        backgroundColor: "#0b0b0b", // gelap premium
         paddingTop: "5rem",
         paddingBottom: "5rem",
       }}
@@ -39,8 +41,9 @@ function Testimonial() {
           className="text-center"
           style={{
             fontWeight: 700,
-            color: "#0b1f3a",
+            color: "#ffffff",
             marginBottom: "0.5rem",
+            fontFamily: "'Playfair Display', serif",
           }}
         >
           Testimoni Pelanggan
@@ -51,14 +54,15 @@ function Testimonial() {
           className="text-center"
           style={{
             fontSize: "0.9rem",
-            color: "#64748b",
+            color: "#d1d5db",
             maxWidth: "520px",
             margin: "0 auto 3rem auto",
             lineHeight: "1.6",
+            fontFamily: "'Playfair Display', serif",
           }}
         >
-          Beberapa pengalaman pelanggan yang telah berbelanja dan menggunakan
-          produk kami sebagai bentuk kepercayaan dan kepuasan.
+          Beberapa pengalaman pelanggan yang telah merasakan parfum eksklusif
+          kami sebagai simbol aroma premium dan layanan terbaik.
         </p>
 
         {/* ===== MOBILE (SLIDER) ===== */}
@@ -70,7 +74,7 @@ function Testimonial() {
                   <div
                     style={{
                       fontSize: "1.6rem",
-                      color: "#0d6efd",
+                      color: "#facc15", // warna emas premium
                       marginBottom: "1rem",
                     }}
                   >
@@ -81,7 +85,7 @@ function Testimonial() {
                     style={{
                       fontSize: "0.95rem",
                       lineHeight: "1.7",
-                      color: "#374151",
+                      color: "#e5e7eb",
                       marginBottom: "1.4rem",
                     }}
                   >
@@ -91,7 +95,7 @@ function Testimonial() {
                   <small
                     style={{
                       fontSize: "0.8rem",
-                      color: "#64748b",
+                      color: "#d1d5db",
                       fontWeight: 500,
                     }}
                   >
@@ -111,7 +115,7 @@ function Testimonial() {
                 <div
                   style={{
                     fontSize: "1.6rem",
-                    color: "#0d6efd",
+                    color: "#facc15",
                     marginBottom: "1rem",
                   }}
                 >
@@ -122,7 +126,7 @@ function Testimonial() {
                   style={{
                     fontSize: "0.95rem",
                     lineHeight: "1.7",
-                    color: "#374151",
+                    color: "#e5e7eb",
                     marginBottom: "1.4rem",
                   }}
                 >
@@ -132,7 +136,7 @@ function Testimonial() {
                 <small
                   style={{
                     fontSize: "0.8rem",
-                    color: "#64748b",
+                    color: "#d1d5db",
                     fontWeight: 500,
                   }}
                 >

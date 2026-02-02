@@ -4,10 +4,11 @@ function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#0b1f3a",
+        backgroundColor: "#0b0b0b",
         color: "#ffffff",
         paddingTop: "3.5rem",
         paddingBottom: "2rem",
+        fontFamily: "'Playfair Display', serif",
       }}
     >
       <Container>
@@ -20,13 +21,13 @@ function Footer() {
             <p
               style={{
                 fontSize: "0.85rem",
-                color: "#cbd5e1",
+                color: "#d1d5db",
                 lineHeight: "1.6",
               }}
             >
-              Kami menyediakan produk pilihan dengan kualitas terjamin,
-              pelayanan cepat, dan sistem pemesanan yang mudah melalui WhatsApp
-              maupun marketplace terpercaya.
+              Kami menghadirkan parfum eksklusif dengan aroma premium, kemasan
+              elegan, dan layanan cepat melalui WhatsApp maupun marketplace
+              terpercaya.
             </p>
           </Col>
 
@@ -66,7 +67,7 @@ function Footer() {
                 color: "#cbd5e1",
               }}
             >
-              Fast response • Admin aktif • Aman
+              Respon cepat • Admin aktif • Aman & terpercaya
             </p>
           </Col>
 
@@ -85,7 +86,7 @@ function Footer() {
             >
               <iframe
                 title="Google Maps"
-                src="https://www.google.com/maps?q=Jakarta&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.879556845808!2d109.90973117500122!3d-7.326093603101307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa10055d056df%3A0xf8bc3be8d729c22!2sMystery%20Perfume!5e0!3m2!1sen!2sid!4v1709145320188!5m2!1sen!2sid"
                 width="100%"
                 height="160"
                 style={{ border: 0 }}
@@ -105,7 +106,7 @@ function Footer() {
             color: "#94a3b8",
           }}
         >
-          © 2026 Landing Page • All rights reserved
+          © 2026 Landing Page Parfum • All rights reserved
         </div>
       </Container>
     </footer>
