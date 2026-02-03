@@ -16,18 +16,18 @@ import tani12 from "../assets/images/tani12.jpg";
 
 function Product() {
   const products = [
-    { id: 1, name: "Pestisida Organik", price: "Rp 25.000", image: tani1 },
-    { id: 2, name: "Herbisida Ampuh", price: "Rp 35.000", image: tani2 },
-    { id: 3, name: "Fungisida Tanaman", price: "Rp 40.000", image: tani3 },
-    { id: 4, name: "Pupuk Cair Premium", price: "Rp 30.000", image: tani4 },
-    { id: 5, name: "Bibit Padi Unggul", price: "Rp 15.000", image: tani5 },
-    { id: 6, name: "Bibit Jagung Hybrid", price: "Rp 18.000", image: tani6 },
-    { id: 7, name: "Bibit Cabai Merah", price: "Rp 12.000", image: tani7 },
-    { id: 8, name: "Bibit Tomat Unggul", price: "Rp 12.000", image: tani8 },
-    { id: 9, name: "ZPT Perangsang Tumbuh", price: "Rp 28.000", image: tani9 },
-    { id: 10, name: "Insektisida Alami", price: "Rp 32.000", image: tani10 },
-    { id: 11, name: "Pupuk Granul", price: "Rp 45.000", image: tani11 },
-    { id: 12, name: "Bibit Sayuran Pack", price: "Rp 10.000", image: tani12 },
+    { id: 1, name: "Mitos 500Ml", price: "Rp 65.000", image: tani1 },
+    { id: 2, name: "Benih", price: "Rp 80.000-180.000", image: tani2 },
+    { id: 3, name: "Sevila", price: "Rp 120.000", image: tani3 },
+    { id: 4, name: "Adore", price: "Rp 150.000", image: tani4 },
+    { id: 5, name: "Starcozeb", price: "Rp 100.000", image: tani5 },
+    { id: 6, name: "Chloraz", price: "Rp 160.000", image: tani6 },
+    { id: 7, name: "Saminot", price: "Rp 120.000", image: tani7 },
+    { id: 8, name: "Futsanil", price: "Rp 65.000", image: tani8 },
+    { id: 9, name: "Fosdak", price: "Rp 80.000", image: tani9 },
+    { id: 10, name: "MaxtriG", price: "Rp 85.000", image: tani10 },
+    { id: 11, name: "Uranus", price: "Rp 75.000", image: tani11 },
+    { id: 12, name: "Benih", price: "Rp 80.000-180.000", image: tani12 },
   ];
 
   // MOBILE: 2 produk per slide
@@ -96,7 +96,7 @@ function Product() {
 
         {/* CTA */}
         <Button
-          href="https://wa.me/628xxxxxxxxxx"
+          href="https://wa.me/6288983943409"
           size="sm"
           className="w-100 d-flex align-items-center justify-content-center gap-1"
           style={{

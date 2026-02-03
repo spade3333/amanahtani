@@ -31,37 +31,12 @@ function Footer() {
             </p>
           </Col>
 
-          {/* KONTAK */}
+          {/* HUBUNGI KAMI */}
           <Col md={4} className="text-center">
             <h5 style={{ fontWeight: 600, marginBottom: "0.75rem" }}>
               Hubungi Kami
             </h5>
 
-            <div className="d-flex justify-content-center gap-3 fs-4 mb-2">
-              <a
-                href="https://wa.me/628xxxxxxxxxx"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#25D366" }}
-              >
-                <i className="bi bi-whatsapp"></i>
-              </a>
-
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "#c8e6c9" }}
-              >
-                <i className="bi bi-instagram"></i>
-              </a>
-
-              <a href="mailto:email@domain.com" style={{ color: "#e8f5e9" }}>
-                <i className="bi bi-envelope"></i>
-              </a>
-            </div>
-
-            {/* JAM OPERASIONAL */}
             <p
               style={{
                 fontSize: "0.8rem",
@@ -75,10 +50,52 @@ function Footer() {
               style={{
                 fontSize: "0.8rem",
                 color: "#c8e6c9",
+                marginBottom: "1rem",
               }}
             >
               Setiap Hari • 06.00 – 18.00
             </p>
+
+            {/* Media Sosial */}
+            <div className="d-flex justify-content-center gap-3">
+              <a
+                href="https://www.tiktok.com/@ardiyanto30"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#ffffff",
+                  fontSize: "1.5rem",
+                  transition: "transform 0.2s",
+                }}
+                className="d-flex align-items-center justify-content-center"
+              >
+                <i className="bi bi-tiktok"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/amanah.tani_id1"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#ffffff",
+                  fontSize: "1.5rem",
+                  transition: "transform 0.2s",
+                }}
+              >
+                <i className="bi bi-instagram"></i>
+              </a>
+              <a
+                href="https://wa.me/6288983943409"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#ffffff",
+                  fontSize: "1.5rem",
+                  transition: "transform 0.2s",
+                }}
+              >
+                <i className="bi bi-whatsapp"></i>
+              </a>
+            </div>
           </Col>
 
           {/* LOKASI */}
@@ -87,12 +104,22 @@ function Footer() {
               Lokasi Kami
             </h5>
 
+            <p
+              style={{
+                fontSize: "0.8rem",
+                color: "#e8f5e9",
+                marginBottom: "0.5rem",
+              }}
+            >
+              MWH7+R39, Kebumen Lor, Bumirejo, Kec. Mojotengah, Kabupaten
+              Wonosobo, Jawa Tengah 56351, Indonesia
+            </p>
+
             <div
               style={{
                 borderRadius: "12px",
                 overflow: "hidden",
                 boxShadow: "0 6px 18px rgba(0,0,0,0.25)",
-                marginBottom: "0.6rem",
               }}
             >
               <iframe
@@ -105,27 +132,13 @@ function Footer() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-
-            {/* ALAMAT */}
-            <p
-              style={{
-                fontSize: "0.75rem",
-                color: "#e8f5e9",
-                lineHeight: "1.5",
-                marginBottom: 0,
-              }}
-            >
-              📍 MWH7+R39, Kebumen Lor, Bumirejo, Kec. Mojotengah, Kabupaten
-              Wonosobo, Jawa Tengah 56351, Indonesia
-            </p>
           </Col>
         </Row>
 
         {/* COPYRIGHT */}
         <div
-          className="text-center"
+          className="text-center mt-4"
           style={{
-            marginTop: "2.5rem",
             fontSize: "0.75rem",
             color: "#c8e6c9",
           }}
