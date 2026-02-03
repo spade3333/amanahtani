@@ -1,6 +1,6 @@
-import { Container, Button } from "react-bootstrap";
-import heropf from "../assets/images/heropf.jpg";
-import parfume from "../assets/images/parfume.png";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import heropf from "../assets/images/herotani.jpg";
+import logo from "../assets/images/logo.png";
 
 function Hero() {
   const fontStyle = { fontFamily: "'Playfair Display', serif" };
@@ -8,121 +8,177 @@ function Hero() {
   return (
     <section
       id="home"
-      className="d-flex align-items-center"
       style={{
         minHeight: "100vh",
         background: `url(${heropf}) center/cover no-repeat`,
         position: "relative",
+        display: "flex",
+        alignItems: "center",
         color: "#ffffff",
       }}
     >
-      {/* Overlay gelap */}
+      {/* Overlay */}
       <div
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          inset: 0,
+          background:
+            "linear-gradient(rgba(27,94,32,0.72), rgba(27,94,32,0.72))",
           zIndex: 1,
         }}
-      ></div>
+      />
 
       <Container
-        className="text-center"
         style={{
-          maxWidth: "560px",
-          paddingTop: "4.5rem",
-          paddingBottom: "4.5rem",
           position: "relative",
           zIndex: 2,
+          paddingTop: "5rem",
+          paddingBottom: "5rem",
           ...fontStyle,
         }}
       >
-        {/* HEADLINE */}
-        <h1
-          style={{
-            fontSize: "clamp(1.6rem, 3.5vw, 2.1rem)",
-            lineHeight: "1.25",
-            fontWeight: 700,
-            marginBottom: "1rem",
-            letterSpacing: "-0.01em",
-            color: "#ffffff",
-            ...fontStyle,
-          }}
-        >
-          Wewangian Premium
-          <br />
-          Eksklusif untuk Anda
-        </h1>
-
-        {/* SUBHEADLINE */}
-        <p
-          style={{
-            fontSize: "clamp(0.9rem, 2.5vw, 1rem)",
-            lineHeight: "1.6",
-            marginBottom: "2.4rem",
-            color: "#ffffffcc",
-            ...fontStyle,
-          }}
-        >
-          Temukan aroma yang memikat, elegan, dan tahan lama. Pesan sekarang dan
-          nikmati pengalaman parfum mewah di rumah Anda.
-        </p>
-
-        {/* GAMBAR PARFUM + CTA */}
-        <div style={{ marginTop: "1.2rem" }}>
-          {/* GAMBAR PARFUM */}
-          <div
-            className="d-flex align-items-center justify-content-center mx-auto"
-            style={{
-              width: "120px",
-              height: "120px",
-              borderRadius: "50%",
-              backgroundColor: "rgba(255, 255, 255, 0.15)",
-              marginBottom: "2rem",
-              overflow: "hidden",
-            }}
+        {/* ===== MAIN CONTENT ===== */}
+        <Row className="align-items-center" style={{ minHeight: "360px" }}>
+          {/* TEXT */}
+          <Col
+            md={6}
+            className="
+              d-flex
+              flex-column
+              justify-content-center
+              align-items-center
+              align-items-md-start
+              text-center
+              text-md-start
+            "
           >
-            <img
-              src={parfume}
-              alt="Parfum"
+            <span
               style={{
-                width: "80%",
-                height: "80%",
-                objectFit: "contain",
+                fontSize: "0.75rem",
+                letterSpacing: "1px",
+                color: "#c8e6c9",
+                marginBottom: "0.6rem",
               }}
-            />
-          </div>
+            >
+              TOKO PERTANIAN TERPERCAYA
+            </span>
 
-          {/* CTA */}
+            <h1
+              style={{
+                fontSize: "clamp(2rem, 4vw, 2.7rem)",
+                fontWeight: 700,
+                lineHeight: "1.25",
+                marginBottom: "1rem",
+              }}
+            >
+              Solusi Pertanian
+              <br />
+              Sehat & Berkualitas
+            </h1>
+
+            <p
+              style={{
+                fontSize: "1rem",
+                lineHeight: "1.75",
+                color: "#e8f5e9",
+                maxWidth: "460px",
+              }}
+            >
+              Amanah Tani menyediakan obat pertanian dan bibit pack unggulan
+              untuk mendukung pertumbuhan tanaman yang sehat, kuat, dan hasil
+              panen yang optimal.
+            </p>
+          </Col>
+
+          {/* LOGO */}
+          <Col
+            md={6}
+            className="
+    d-flex
+    align-items-center
+    justify-content-center
+    mt-4
+    mt-md-0
+  "
+          >
+            <div
+              style={{
+                width: "240px",
+                padding: "1.4rem 1.2rem",
+                borderRadius: "24px",
+                backgroundColor: "#ffffff",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                boxShadow: "0 18px 40px rgba(0,0,0,0.3)",
+                fontFamily: "'Playfair Display', serif",
+              }}
+            >
+              {/* LOGO */}
+              <img
+                src={logo}
+                alt="Amanah Tani"
+                style={{
+                  width: "120px",
+                  height: "120px",
+                  objectFit: "contain",
+                  marginBottom: "0.6rem",
+                }}
+              />
+
+              {/* NAMA TOKO */}
+              <div
+                style={{
+                  fontSize: "1.05rem",
+                  fontWeight: 700,
+                  letterSpacing: "1px",
+                  color: "#1b5e20",
+                }}
+              >
+                AMANAH TANI
+              </div>
+
+              {/* TAGLINE KECIL */}
+              <div
+                style={{
+                  fontSize: "0.7rem",
+                  marginTop: "0.15rem",
+                  color: "#4caf50",
+                  letterSpacing: "0.5px",
+                }}
+              >
+                Toko Pertanian
+              </div>
+            </div>
+          </Col>
+        </Row>
+
+        {/* ===== CTA ===== */}
+        <div className="text-center mt-4">
           <Button
-            variant="light"
             href="https://wa.me/628xxxxxxxxxx"
-            className="w-100 d-flex align-items-center justify-content-center gap-2 py-2"
+            className="d-inline-flex align-items-center gap-2 px-4 py-2"
             style={{
-              fontSize: "0.95rem",
+              fontSize: "1rem",
               fontWeight: 600,
               borderRadius: "12px",
-              color: "#000",
-              ...fontStyle,
+              backgroundColor: "#ffffff",
+              color: "#1b5e20",
+              border: "none",
             }}
           >
             <i className="bi bi-whatsapp fs-5"></i>
-            Pesan via WhatsApp
+            Konsultasi & Pemesanan
           </Button>
 
-          {/* MICRO TRUST */}
           <p
             style={{
               fontSize: "0.8rem",
-              marginTop: "1rem",
-              color: "#ffffffcc",
-              ...fontStyle,
+              marginTop: "0.9rem",
+              color: "#c8e6c9",
             }}
           >
-            Respon cepat • Produk asli • Pengiriman aman
+            Produk resmi • Bibit unggulan • Jam kerja 06.00 – 18.00
           </p>
         </div>
       </Container>

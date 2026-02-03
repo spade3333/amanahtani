@@ -4,29 +4,28 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 function Navigation() {
   const [expanded, setExpanded] = useState(false);
 
+  const green = "#2e7d32";
+  const greenDark = "#1b5e20";
+
   return (
     <>
       <Navbar
         expand="lg"
         fixed="top"
         expanded={expanded}
-        variant="dark"
         style={{
-          backgroundColor: "rgba(0, 0, 0, 0.95)",
+          backgroundColor: "rgba(255, 255, 255, 0.95)",
           backdropFilter: "blur(8px)",
           padding: "0.5rem 0",
           height: "56px",
           zIndex: 1030,
+          borderBottom: "1px solid #e0e0e0",
         }}
         className="shadow-sm"
       >
         <Container style={{ maxWidth: "1100px" }} className="position-relative">
           {/* LOGO */}
-          <Navbar.Brand
-            href="#home"
-            onClick={() => setExpanded(false)}
-            style={{ fontSize: "1.3rem" }}
-          >
+          <Navbar.Brand href="#home" onClick={() => setExpanded(false)}>
             <img
               src="/logo.png"
               alt="Brand Logo"
@@ -38,7 +37,7 @@ function Navigation() {
             />
           </Navbar.Brand>
 
-          {/* BRAND CENTER (MOBILE ONLY) */}
+          {/* BRAND CENTER (MOBILE) */}
           <div
             className="d-lg-none"
             style={{
@@ -48,14 +47,13 @@ function Navigation() {
               transform: "translate(-50%, -50%)",
               fontWeight: 700,
               fontSize: "0.95rem",
-              color: "#ffffff",
+              color: greenDark,
               pointerEvents: "none",
               whiteSpace: "nowrap",
-              fontFamily: "'Playfair Display', serif",
               letterSpacing: "2px",
             }}
           >
-            Mystery Parfume
+            Amanah Tani
           </div>
 
           {/* BRAND DESKTOP */}
@@ -64,16 +62,15 @@ function Navigation() {
             className="d-none d-lg-block"
             style={{
               fontWeight: 700,
-              color: "#ffffff",
+              color: greenDark,
               marginLeft: "0.4rem",
             }}
           >
-            Mystery Parfume
+            Amanah Tani
           </Navbar.Brand>
 
-          {/* CUSTOM BURGER TOGGLE */}
+          {/* BURGER */}
           <Navbar.Toggle
-            aria-controls="main-navbar"
             className="ms-auto d-lg-none"
             onClick={() => setExpanded(!expanded)}
           >
@@ -84,7 +81,6 @@ function Navigation() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
-                cursor: "pointer",
               }}
             >
               {[0, 1, 2].map((i) => (
@@ -94,8 +90,8 @@ function Navigation() {
                     display: "block",
                     height: "2px",
                     width: "100%",
-                    backgroundColor: "#ffffff",
-                    borderRadius: "1px",
+                    backgroundColor: green,
+                    borderRadius: "2px",
                     transition: "all 0.3s ease",
                     transform:
                       expanded && i === 0
@@ -106,29 +102,26 @@ function Navigation() {
                             ? "rotate(-45deg) translateY(-7px)"
                             : "none",
                   }}
-                ></span>
+                />
               ))}
             </div>
           </Navbar.Toggle>
 
           {/* DESKTOP MENU */}
-          <Navbar.Collapse
-            id="main-navbar"
-            className="d-none d-lg-flex justify-content-end"
-          >
-            <Nav className="gap-3">
-              <Nav.Link href="#home" style={{ color: "#ffffff" }}>
-                Home
-              </Nav.Link>
-              <Nav.Link href="#about" style={{ color: "#ffffff" }}>
-                About
-              </Nav.Link>
-              <Nav.Link href="#product" style={{ color: "#ffffff" }}>
-                Product
-              </Nav.Link>
-              <Nav.Link href="#testimoni" style={{ color: "#ffffff" }}>
-                Testimoni
-              </Nav.Link>
+          <Navbar.Collapse className="d-none d-lg-flex justify-content-end">
+            <Nav className="gap-4">
+              {["Home", "About", "Product", "Testimoni"].map((item) => (
+                <Nav.Link
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  style={{
+                    color: greenDark,
+                    fontWeight: 500,
+                  }}
+                >
+                  {item}
+                </Nav.Link>
+              ))}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -143,38 +136,24 @@ function Navigation() {
             top: "56px",
             width: "100%",
             zIndex: 1029,
-            backgroundColor: "rgba(0, 0, 0, 0.95)",
+            backgroundColor: "#ffffff",
+            borderBottom: "1px solid #e0e0e0",
           }}
         >
           <Nav className="flex-column text-center py-3 gap-2">
-            <Nav.Link
-              href="#home"
-              onClick={() => setExpanded(false)}
-              style={{ color: "#ffffff" }}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="#about"
-              onClick={() => setExpanded(false)}
-              style={{ color: "#ffffff" }}
-            >
-              About
-            </Nav.Link>
-            <Nav.Link
-              href="#product"
-              onClick={() => setExpanded(false)}
-              style={{ color: "#ffffff" }}
-            >
-              Product
-            </Nav.Link>
-            <Nav.Link
-              href="#testimoni"
-              onClick={() => setExpanded(false)}
-              style={{ color: "#ffffff" }}
-            >
-              Testimoni
-            </Nav.Link>
+            {["Home", "About", "Product", "Testimoni"].map((item) => (
+              <Nav.Link
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                onClick={() => setExpanded(false)}
+                style={{
+                  color: greenDark,
+                  fontWeight: 500,
+                }}
+              >
+                {item}
+              </Nav.Link>
+            ))}
           </Nav>
         </div>
       )}
